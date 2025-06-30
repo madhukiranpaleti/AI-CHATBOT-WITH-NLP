@@ -1,0 +1,59 @@
+
+import nltk
+nltk.download('punkt')
+
+
+import nltk
+from nltk.stem.lancaster import LancasterStemmer
+import numpy as np
+import random
+
+stemmer = LancasterStemmer()
+
+
+intents = {
+    "greetings": {
+        "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening"],
+        "responses": ["Hello!", "Hi there!", "Greetings!", "How can I help you?"]
+    },
+    "goodbye": {
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": ["Goodbye!", "See you later!", "Have a nice day!"]
+    },
+    "thanks": {
+        "patterns": ["Thanks", "Thank you", "That's helpful"],
+        "responses": ["You're welcome!", "Happy to help!", "Any time!"]
+    },
+    "noanswer": {
+        "responses": ["Sorry, I don't understand that. Can you rephrase?"]
+    }
+}
+
+def clean_up_sentence(sentence):
+    sentence_words = nltk.word_tokenize(sentence)
+    sentence_words = [stemmer.stem(word.lower()) for word in sentence_words]
+    return sentence_word
+def classify(sentence):
+    sentence_words = clean_up_sentence(sentence)
+    for intent, intent_data in intents.items():
+        for pattern in intent_data.get("patterns", []):
+            pattern_words = clean_up_sentence(pattern)
+            if set(pattern_words).intersection(sentence_words):
+                return intent
+    return "noanswer"
+
+
+def response(sentence):
+    intent = classify(sentence)
+    return random.choice(intents[intent]['responses'])
+
+
+print("Chatbot: Hello! How can I help you? (type 'quit' to exit)")
+while True:
+    inp = input("You: ")
+    if inp.lower() == "quit":
+        print("Chatbot: Goodbye!")
+        break
+    print("Chatbot:", response(inp))
+
+
