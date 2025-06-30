@@ -19,4 +19,5 @@ The chatbot can be customized for various domains like customer support, FAQs, o
 
 output:
    
-     ![Image](https://github.com/user-attachments/assets/dde0f0a3-cf9e-4b65-bd95-c82241d87a7d)
+     ![Image](https://github.com/user-attachments/assets/38b0fd63-a965-450f-a09c-1ba07847240f)
+     
