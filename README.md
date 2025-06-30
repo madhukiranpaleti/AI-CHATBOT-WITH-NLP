@@ -12,6 +12,8 @@ MENTOR:NEELA SANTOSH
 
 
 description:
+
+
     This AI Chatbot uses Natural Language Processing (NLP) to understand and respond to user queries in real time.
 Built with libraries like NLTK or spaCy, it can tokenize, stem, and classify user input effectively.
 It provides accurate, context-aware answers and learns from interactions.
