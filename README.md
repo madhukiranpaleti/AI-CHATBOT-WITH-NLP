@@ -20,5 +20,4 @@ It provides accurate, context-aware answers and learns from interactions.
 The chatbot can be customized for various domains like customer support, FAQs, or virtual assistants.
 
 output:
-   
-     ![Image](https://github.com/user-attachments/assets/aecea627-3802-4079-842b-08558f280818)
+   https://github.com/madhukiranpaleti/AI-CHATBOT-WITH-NLP/issues/3#issue-3190680290
